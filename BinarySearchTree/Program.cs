@@ -21,6 +21,9 @@ namespace BinarySearchTree
             tree.Add(67);
 
             tree.Print();
+
+            bool item = tree.Search(67);
+            Console.WriteLine("\nResult: "+(item ? "Found" : "Not Found"));
         }
     }
 }

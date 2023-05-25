@@ -44,6 +44,29 @@ namespace BinarySearchTree
                 }
             }
         }
+        public bool Search(int data)
+        {
+            return Search(Root, data);
+        }
+        private bool Search(Node node, int data)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (data < node.Data)
+            {
+                return Search(node.Left, data);
+            }
+            else if (data > node.Data)
+            {
+                return Search(node.Right, data);
+            }
+            else
+            {
+                return true;
+            }
+        }
         public void Print()
         {
             PrintInOrder(Root);
